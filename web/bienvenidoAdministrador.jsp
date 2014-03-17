@@ -1,8 +1,17 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    int rol = (Integer)session.getAttribute("rol");
-    if(rol!=1){response.sendRedirect("index.jsp");}
-    String usuario = (String)session.getAttribute("nombre_usuario");
+    //Checamos que exista la sesion
+    if(session != null && session.getAttribute("rol") != null)
+    {
+        int rol = (Integer)session.getAttribute("rol");
+
+        //Si no es administrador se redirecciona al inicio de un usuario normal
+        if(rol!=1){response.sendRedirect("bienvenido.jsp");}
+
+        String usuario = (String)session.getAttribute("nombre_usuario");
+    }
+    else
+        response.sendRedirect("index.jsp");
 %>
 <!DOCTYPE html>
 <html lang="es">
