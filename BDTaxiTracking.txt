@@ -12,3 +12,5 @@ create table usuario(
 
 insert into usuario values ("admin", "admin", "Francisco", "Negrete", "Juarez", "fjj.negrete@gmail.com", 1);
 insert into usuario values ("usuario", "usuario", "Carlos", "Jimenez", "Lopez", "cjimenezl1001@alumno.ipn.mx", 0);
+
+este es un cambio
